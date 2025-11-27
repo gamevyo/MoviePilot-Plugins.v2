@@ -28,21 +28,21 @@ from app.schemas.types import EventType
 from app.utils.string import StringUtils
 
 
-class DownloaderHelper(_PluginBase):
+class DownloaderHelperGamevyo(_PluginBase):
     # 插件名称
-    plugin_name = "下载器助手"
+    plugin_name = "下载器助手魔改版"
     # 插件描述
     plugin_desc = "自动标签、自动做种、自动删种。"
     # 插件图标
     plugin_icon = "https://raw.githubusercontent.com/hotlcc/MoviePilot-Plugins-Third/main/icons/DownloaderHelper.png"
     # 插件版本
-    plugin_version = "4.0.4"
+    plugin_version = "5.0.4"
     # 插件作者
-    plugin_author = "hotlcc"
+    plugin_author = "gamevyo"
     # 作者主页
-    author_url = "https://github.com/hotlcc"
+    author_url = "https://github.com/gamevyo"
     # 插件配置项ID前缀
-    plugin_config_prefix = "com.hotlcc.downloaderhelper."
+    plugin_config_prefix = "com.hotlcc.downloaderhelpergamevyo."
     # 加载顺序
     plugin_order = 66
     # 可使用的用户级别
