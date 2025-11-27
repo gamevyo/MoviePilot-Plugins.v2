@@ -32,17 +32,17 @@ T = TypeVar('T', bound=BaseModel)
 
 class HitAndRun(_PluginBase):
     # 插件名称
-    plugin_name = "H&R助手"
+    plugin_name = "H&R助手魔改版"
     # 插件描述
     plugin_desc = "监听下载、订阅、刷流等行为，对H&R种子进行自动标签管理。"
     # 插件图标
     plugin_icon = "https://raw.githubusercontent.com/InfinityPacer/MoviePilot-Plugins/main/icons/hitandrun.png"
     # 插件版本
-    plugin_version = "1.5.1"
+    plugin_version = "2.5.1"
     # 插件作者
-    plugin_author = "InfinityPacer"
+    plugin_author = "gamevyo"
     # 作者主页
-    author_url = "https://github.com/InfinityPacer"
+    author_url = "https://github.com/gamevyo"
     # 插件配置项ID前缀
     plugin_config_prefix = "hitandrun_"
     # 加载顺序
