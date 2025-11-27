@@ -30,7 +30,7 @@ lock = threading.Lock()
 T = TypeVar('T', bound=BaseModel)
 
 
-class HitAndRun(_PluginBase):
+class HitAndRunGamevyo(_PluginBase):
     # 插件名称
     plugin_name = "H&R助手魔改版"
     # 插件描述
@@ -44,7 +44,7 @@ class HitAndRun(_PluginBase):
     # 作者主页
     author_url = "https://github.com/gamevyo"
     # 插件配置项ID前缀
-    plugin_config_prefix = "hitandrun_"
+    plugin_config_prefix = "hitandrungamevyo_"
     # 加载顺序
     plugin_order = 24
     # 可使用的用户级别
