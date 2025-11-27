@@ -1,5 +1,5 @@
 {
-   "HitAndRun": {
+   "HitAndRunGamevyo": {
         "name": "H&R助手魔改版",
         "description": "监听下载、订阅、刷流等行为，对H&R种子进行自动标签管理。",
         "labels": "站点,H&R",
@@ -15,6 +15,24 @@
             "v1.2": "调整H&R已完成种子移除策略",
             "v1.1": "调整日志以及消息推送并修复移除H&R标签等问题",
             "v1.0": "增加H&R助手插件，监听下载、订阅、刷流等行为，对H&R种子进行自动标签管理"
+        }
+    },
+    "DownloaderHelperGamevyo": {
+        "name": "下载器助手魔改版",
+        "description": "自动标签、自动做种、自动删种。",
+        "labels": "下载管理,仪表板",
+        "version": "5.0.4",
+        "release": true,
+        "icon": "https://raw.githubusercontent.com/hotlcc/MoviePilot-Plugins-Third/main/icons/DownloaderHelper.png",
+        "author": "gamevyo",
+        "level": 1,
+        "history": {
+            "v5.0.4": "魔改。",
+            "v4.0.4": "修正Tracker域名解析缺陷。",
+            "v4.0.3": "修复活动种子仪表板报错的问题。",
+            "v4.0.2": "修正活动种子仪表板状态显示。",
+            "v4.0.1": "支持配置【事件删种策略】。更新后可能需要重启MP！",
+            "v4.0": "适配 MoviePilot V2。"
         }
     }
 }
