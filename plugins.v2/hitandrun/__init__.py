@@ -1614,7 +1614,7 @@ class HitAndRun(_PluginBase):
         if isinstance(torrent_data, TorrentInfo):
             result = cls.from_torrent_info(torrent_info=torrent_data)
         else:
-            allowed_fields = {field.name for field in fields(TorrentInfo)}
+            allowed_fields = {info.name for info in fields(TorrentInfo)}
             # 过滤数据，只保留 TorrentInfo 数据类中的字段
             filtered_data = {key: value for key, value in torrent_data.items() if key in allowed_fields}
             # 创建指定类的实例
