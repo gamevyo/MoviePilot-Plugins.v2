@@ -1614,7 +1614,7 @@ class HitAndRunGamevyo(_PluginBase):
         if isinstance(torrent_data, TorrentInfo):
             result = cls.from_torrent_info(torrent_info=torrent_data)
         else:
-            allowed_fields = {info.name for info in fields(TorrentInfo)}
+            allowed_fields = {info.field.name for info.field in fields(TorrentInfo)}
             # 过滤数据，只保留 TorrentInfo 数据类中的字段
             filtered_data = {key: value for key, value in torrent_data.items() if key in allowed_fields}
             # 创建指定类的实例
@@ -1628,13 +1628,13 @@ class HitAndRunGamevyo(_PluginBase):
     def __create_torrent_history(torrent_hash: str, torrent_data: Union[dict, TorrentInfo],
                                  task_type: TaskType) -> TorrentHistory:
         """创建种子信息"""
-        return HitAndRunGamevyo.__create_torrent_instance(torrent_hash, torrent_data, TorrentHistory, task_type)
+        return HitAndRun.__create_torrent_instance(torrent_hash, torrent_data, TorrentHistory, task_type)
 
     @staticmethod
     def __create_torrent_task(torrent_hash: str, torrent_data: Union[dict, TorrentInfo],
                               task_type: TaskType) -> TorrentTask:
         """创建种子任务"""
-        return HitAndRunGamevyo.__create_torrent_instance(torrent_hash, torrent_data, TorrentTask, task_type)
+        return HitAndRun.__create_torrent_instance(torrent_hash, torrent_data, TorrentTask, task_type)
 
     def __convert_torrent_info_to_task(self, torrent: Any, histories: Dict[str, TorrentHistory]) \
             -> Optional[TorrentTask]:
