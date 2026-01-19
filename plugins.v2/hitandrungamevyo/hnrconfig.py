@@ -86,11 +86,11 @@ class HNRConfig(BaseConfig):
         return values
 
     @validator("*", pre=True, allow_reuse=True)
-    def __empty_string_to_float(cls, v, values, field):
+    def __empty_string_to_float(cls, v, values, info):
         """
         校验空字符
         """
-        if field.type_ is float and not v:
+        if info.field.type_ is float and not v:
             return 0.0
         return v
 
