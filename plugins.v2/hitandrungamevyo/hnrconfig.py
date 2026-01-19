@@ -85,7 +85,14 @@ class HNRConfig(BaseConfig):
             values["notify"] = NotifyMode.ALWAYS
         return values
 
-
+    @validator("*", pre=True, allow_reuse=True)
+    def __empty_string_to_float(cls, v, values, field):
+        """
+        校验空字符
+        """
+        if field.type_ is float and not v:
+            return 0.0
+        return v
 
     @validator("auto_cleanup_days", pre=True, allow_reuse=True)
     def set_default_auto_cleanup_days(cls, v):
@@ -169,5 +176,5 @@ class HNRConfig(BaseConfig):
             return site_config
         else:
             # 使用 __fields__ 获取所有字段并从实例中获取对应值
-            base_config_attrs = {info: getattr(self, info) for info.field in self.__fields__}
+            base_config_attrs = {field: getattr(self, field) for field in self.__fields__}
             return SiteConfig(**base_config_attrs, site_name=site_name)
