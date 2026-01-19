@@ -90,7 +90,7 @@ class HNRConfig(BaseConfig):
         """
         校验空字符
         """
-        if info.type_ is float and not v:
+        if info.field.type_ is float and not v:
             return 0.0
         return v
 
@@ -176,5 +176,5 @@ class HNRConfig(BaseConfig):
             return site_config
         else:
             # 使用 __fields__ 获取所有字段并从实例中获取对应值
-            base_config_attrs = {field: getattr(self, field) for field in self.__fields__}
+            base_config_attrs = {info: getattr(self, info) for info.field in self.__fields__}
             return SiteConfig(**base_config_attrs, site_name=site_name)
