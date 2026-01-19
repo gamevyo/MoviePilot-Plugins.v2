@@ -85,14 +85,7 @@ class HNRConfig(BaseConfig):
             values["notify"] = NotifyMode.ALWAYS
         return values
 
-    @validator("*", pre=True, allow_reuse=True)
-    def __empty_string_to_float(cls, v, values, info):
-        """
-        校验空字符
-        """
-        if info.field.type_ is float and not v:
-            return 0.0
-        return v
+
 
     @validator("auto_cleanup_days", pre=True, allow_reuse=True)
     def set_default_auto_cleanup_days(cls, v):
