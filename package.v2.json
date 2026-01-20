@@ -10,5 +10,17 @@
         "history": {
             "v2.0.0": "魔改"
         }
+    },
+      "BrushFlow": {
+        "name": "站点刷流魔改自用",
+        "description": "魔改自jxxghp大佬，去掉了已整理标签",
+        "labels": "刷流,仪表板",
+        "version": "4.3.5",
+        "icon": "brush.jpg",
+        "author": "jxxghp,InfinityPacer,Seed680,gamevyo",
+        "level": 2,
+        "history": {
+        "v4.3.5": "魔改"
+        }
     }
 }
